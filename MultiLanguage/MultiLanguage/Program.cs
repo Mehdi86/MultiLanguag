@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using MultiLanguage.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MyDbContext>(options =>
+{
+    options.UseSqlServer("Data Source = .; Initial Catalog = MultiLingualDb; Integrated Security = True");
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
