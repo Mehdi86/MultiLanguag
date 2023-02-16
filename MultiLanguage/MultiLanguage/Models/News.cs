@@ -20,6 +20,8 @@ namespace MultiLanguage.Models
 
         public string? Description { get; set; }
 
+        public string? ImageName { get; set; }
+
         public DateTime RegisterDate { get; set; }
 
 
